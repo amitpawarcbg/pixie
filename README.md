@@ -38,13 +38,13 @@ Pixie can also be configured by the user to collect dynamic logs from Go applica
 Pixie automatically traces the following protocols:
 
 Protocol	Support	Notes
-HTTP	Supported	
+HTTP	    Supported	
 HTTP2/gRPC	Partially Supported	Currently only for Golang apps with debug information.
-DNS	Supported	
-NATS	Supported	Requires a NATS build with debug information.
-MySQL	Supported	
+DNS	      Supported	
+NATS	    Supported	Requires a NATS build with debug information.
+MySQL	    Supported	
 PostgreSQL	Supported	
 Cassandra	Supported	
-Redis	Supported	
-Kafka	Supported	
+Redis	    Supported	
+Kafka	    Supported	
 Additional protocols are under development
