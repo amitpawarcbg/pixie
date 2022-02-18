@@ -16,7 +16,8 @@ Scriptability: PxL, Pixie’s flexible Pythonic query language, can be used acro
 
 **Data Sources**
 Pixie uses eBPF to automatically instrument Kubernetes applications.
-
+Pixie captures cluster, namespace, node, pod, service, and container metadata. Pixie does not yet capture logs or events.
+Pixie captures machine-level resource metrics on Linux and other Unix systems such as CPU usage, memory, disk utilization and network bandwidth
 Pixie ships with a set of default data sources, which can also be extended by the user.
 
 **Data Sources**
@@ -80,4 +81,74 @@ eBPF is also used in Pixie's distributed bpftrace script deployment. In this cas
 **Dynamic Logging**
 With Pixie's dynamic logging feature (currently supported for Golang), you specify a function in your deployed code that you'd like to inspect. Pixie then automatically generates the eBPF code for tracing the specified arguments and return values of the function. Once deployed, the auto-generated eBPF probe triggers every time the function is called, and the arguments and return values are recorded into a table which can be queried. This enables the application developer to effectively add logs to their running programs without ever recompiling or redeploying!
 
+**Installation Requirements**
 
+Below are the requirements for deploying Pixie to your Kubernetes (K8s) cluster.
+Please refer to the install guides for information on how to install Pixie to your K8s cluster
+Kubernetes v1.16+ is required.
+
+Production Environments
+
+K8s Environment	Support
+AKS	Supported
+EKS	Supported (includes support on Bottlerocket AMIs)
+EKS Fargate	Not Supported (Fargate does not support eBPF)
+GKE	Supported
+OpenShift	Supported
+Self-hosted	Generally supported, see requirements below including Linux kernel version.
+
+Requirements
+Below are the requirements for deploying Pixie to your Kubernetes (K8s) cluster.
+
+Please refer to the install guides for information on how to install Pixie to your K8s cluster.
+
+Kubernetes
+Kubernetes v1.16+ is required.
+
+Production Environments
+K8s Environment	Support
+AKS	Supported
+EKS	Supported (includes support on Bottlerocket AMIs)
+EKS Fargate	Not Supported (Fargate does not support eBPF)
+GKE	Supported
+OpenShift	Supported
+Self-hosted	Generally supported, see requirements below including Linux kernel version.
+
+**Local Development Environments**
+For local development, we recommend using Minikube with a VM driver (kvm2 on Linux, hyperkit on Mac). Note that Kubernetes environments that run inside a container are not currently supported.
+
+K8s Environment	Support
+Docker Desktop	Not supported
+k0s	Supported
+k3s	Supported
+kind	Not Supported
+minikube with driver=kvm2	Supported
+minikube with driver=hyperkit	Supported
+minikube with driver=docker	Not Supported
+minikube with driver=none	Not Supported
+
+Memory
+Memory requirements for your cluster nodes are as follows:
+Minimum	Notes
+Memory	2GiB	To accommodate application pods, 8GiB+ is recommended.
+
+CPU
+Pixie requires an x86-64 architecture.
+Support
+x86-64	Supported
+ARM	Not supported
+
+Operating System
+Pixie runs on Linux nodes only.
+Support	Version
+Linux	Supported	v4.14+
+Windows	Not Supported	Not in roadmap
+
+Linux Distributions
+The following is a list of Linux distributions that have been tested.
+
+        Version
+Ubuntu	18.04+
+Debian	10+
+RHEL	  8+
+COS	    7.3+
