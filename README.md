@@ -7,7 +7,7 @@ Developers can use Pixie to view the high-level state of their cluster (service 
 
 Pixie was contributed by New Relic, Inc. to the Cloud Native Computing Foundation as a sandbox project in June 2021.
 
-Features
+**Features**
 Auto-telemetry: Pixie uses eBPF to automatically collect telemetry data such as full-body requests, resource and network metrics, application profiles, and more.
 
 In-cluster edge compute: Pixie collects, stores and queries all telemetry data locally in the cluster. Pixie uses less than 5% of cluster CPU, and in most cases less than 2%.
