@@ -478,7 +478,7 @@ Monitor your infrastructure alongside your network and application layer, includ
 
 For more details, check out the [tutorial](https://docs.px.dev/tutorials/pixie-101/infra-health/) or [watch]() an overview.
 
-**Service Performance
+**Service Performance**
 
 Pixie automatically traces a [variety of protocols](https://docs.px.dev/about-pixie/data-sources/). Get immediate visibility into the health of your services, including:
 
