@@ -452,6 +452,88 @@ Open [Pixie's Live UI](https://work.withpixie.ai/) in a new tab.
 For more information, check out our [Live UI
 guide](https://docs.pixielabs.ai/using-pixie/using-live-ui/).
 
+## Use Cases
+
+**Network Monitoring**
+
+Use Pixie to monitor your network, including:
+
+* The flow of network traffic within your cluster.
+* The flow of DNS requests within your cluster.
+* Individual full-body DNS requests and responses.
+* A Map of TCP drops and TCP retransmits across your cluster.
+
+![image](https://user-images.githubusercontent.com/88305831/171801567-dc70f828-379b-45c1-b559-9935e77059ad.png)
+
+For more details, check out the [tutorial](https://docs.px.dev/tutorials/pixie-101/network-monitoring/) or [watch](https://www.youtube.com/watch?v=qIxzIPBhAUI) an overview.
+
+**Infrastructure Health**
+
+Monitor your infrastructure alongside your network and application layer, including:
+
+* Resource usage by Pod, Node, Namespace.
+* CPU flame graphs per Pod, Node.
+
+![image](https://user-images.githubusercontent.com/88305831/171802030-ffb5bea7-dc18-4ec4-b23e-bc2e832fa74c.png)
+
+For more details, check out the [tutorial](https://docs.px.dev/tutorials/pixie-101/infra-health/) or [watch]() an overview.
+
+**Service Performance
+
+Pixie automatically traces a [variety of protocols](https://docs.px.dev/about-pixie/data-sources/). Get immediate visibility into the health of your services, including:
+
+* The flow of traffic between your services.
+* Latency per service and endpoint.
+* Sample of the slowest requests for an individual service.
+
+![image](https://user-images.githubusercontent.com/88305831/171802597-fdda659a-e9d4-427b-9d5a-5d81331c13e0.png)
+
+For more details, check out the [tutorial](https://docs.px.dev/tutorials/pixie-101/service-performance/) or [watch](https://www.youtube.com/watch?v=Rex0yz_5vwc) an overview.
+
+**Database Query Profiling**
+
+Pixie automatically traces several different [database protocols](https://docs.px.dev/about-pixie/data-sources/#supported-protocols). Use Pixie to monitor the performance of your database requests:
+
+* Latency, error, and throughput (LET) rate for all pods.
+* LET rate per normalized query.
+* Latency per individual full-body query.
+* Individual full-body requests and responses.
+
+![image](https://user-images.githubusercontent.com/88305831/171803013-c7e9ff5f-b610-4f57-8238-bc9e2170e88f.png)
+
+For more details, check out the [tutorial](https://docs.px.dev/tutorials/pixie-101/database-query-profiling/) or [watch](https://www.youtube.com/watch?v=5NkU--hDXRQ) an overview.
+
+**Request Tracing**
+
+Pixie makes debugging this communication between microservices easy by providing immediate and deep (full-body) visibility into requests flowing through your cluster. See:
+
+Full-body requests and responses for [supported protocols](https://docs.px.dev/about-pixie/data-sources/#supported-protocols).
+Error rate per Service, Pod.
+
+![image](https://user-images.githubusercontent.com/88305831/171803495-14ae3415-4f87-4491-a0e4-da4b5cc9feec.png)
+
+
+For more details, check out the [tutorial](https://docs.px.dev/tutorials/pixie-101/request-tracing/) or [watch](https://www.youtube.com/watch?v=Gl0so4rbwno) an overview.
+
+**Continuous Application Profiling**
+
+Use Pixie's continuous profiling feature to identify performance issues within application code.
+
+![image](https://user-images.githubusercontent.com/88305831/171803618-039189d0-c2b5-4a0f-8d9c-ebf9b070e16e.png)
+
+For more details, check out the [tutorial](https://docs.px.dev/tutorials/pixie-101/profiler/) or [watch](https://www.youtube.com/watch?v=Zr-s3EvAey8) an overview.
+
+
+**Distributed bpftrace Deployment**
+
+Use Pixie to deploy a [bpftrace](https://github.com/iovisor/bpftrace) program to all of the nodes in your cluster. After deploying the program, Pixie captures the output into a table and makes the data available to be queried and visualized in the Pixie UI. TCP Drops are pictured. For more details, check out the [tutorial](https://docs.px.dev/tutorials/custom-data/distributed-bpftrace-deployment/) or [watch](https://www.youtube.com/watch?v=xT7OYAgIV28) an overview.
+
+**Dynamic Go Logging**
+
+Debug Go binaries deployed in production environments without needing to recompile and redeploy. For more details, check out the [tutorial](https://docs.px.dev/tutorials/custom-data/dynamic-go-logging/) or [watch](https://www.youtube.com/watch?v=aH7PHSsiIPM) an overview.
+
+
+
 ### Check out the tutorials
 
 Learn how to use Pixie for
